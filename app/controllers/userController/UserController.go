@@ -1,10 +1,11 @@
 package UserController
 
 import (
-    "fmt"
-
+    "github.com/gin-gonic/gin"
 )
 
-func Index() {
-    fmt.Println("Test Api")
+func Index(c *gin.Context) {
+    c.JSON(200, gin.H{
+        "message": "Test Api",
+    })
 }
